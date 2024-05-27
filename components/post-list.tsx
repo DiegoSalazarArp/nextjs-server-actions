@@ -12,13 +12,13 @@ export default async function PostList() {
   const data = await response.json();
   return (
     <ul>
-    {data.posts.map((post: postData) => (
-      <li key={post.id} className="mb-5">
-        <Link href={`/posts/${post.id}`} className="text-2xl font-bold">
-          {post.title}
-        </Link>
-      </li>
-    ))}
-  </ul>
-  )
+      {data.posts.map((post: postData) => (
+        <li key={post.id} className="mb-5">
+          <Link href={`/posts/${post.id}`} className="text-2xl font-bold">
+            {post.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
 }

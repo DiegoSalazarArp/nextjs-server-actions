@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-import Container from "@/components/Container";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Container from "@/components/container";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,9 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className}} bg-zinc-300 text-zinc-800 `}
-      >
+      <body className={`${inter.className}} bg-zinc-300 text-zinc-800 `}>
         <Container>
           <Header />
           {children}
