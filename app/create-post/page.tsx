@@ -1,8 +1,7 @@
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs";
 import createPost from "../actions/actions";
 
-export default function Page() {
-  const { isAuthenticated } = getKindeServerSession();
+export default async function Page() {
   return (
     <main className="text-center pt-16">
       <h1 className="text-4xl md:text-5xl font-bold mb-5">Create post</h1>
@@ -22,6 +21,8 @@ export default function Page() {
         >
           Submit
         </button>
+
+        <LogoutLink>Logout</LogoutLink>
       </form>
     </main>
   );
