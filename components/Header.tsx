@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Posts", href: "/posts" },
-  { label: "About", href: "/about" },
+  { label: "Create post", href: "/create-post" },
 ];
 
 export default function Header() {
