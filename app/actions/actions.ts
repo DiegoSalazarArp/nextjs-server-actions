@@ -62,5 +62,5 @@ export async function createPost(formData: FormData) {
     throw result.error;
   }
 
-  console.log(result.error);
+  revalidatePath("/posts");
 }
